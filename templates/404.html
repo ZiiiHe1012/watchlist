@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ user.name }}'s Watchlist</title>
+    <link rel="icon" href="{{ url_for('static', filename='R-C.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body>
+    <h2>
+        <img alt="View" class="view" src="{{ url_for('static', filename='images/view.jpg') }}">
+        {{ user.name }}'s Watchlist
+    </h2>
+    <ul class="movie-list">
+        <li>
+            Page Not Found - 404
+            <span class="float-right">
+                <a href="{{ url_for('index') }}">Go Back</a>
+            </span>
+        </li>
+    </ul>
+    <footer>
+        <small>&copy; 2025 <a href="https://github.com/ZiiiHe1012/watchlist">Watchlist</a></small>
+    </footer>
+</body>
+</html>
