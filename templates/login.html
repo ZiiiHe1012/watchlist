@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ user.name }}'s Watchlist</title>
+    <link rel="icon" href="{{ url_for('static', filename='R-C.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body>
+    <h2>
+        <img alt="View" class="view" src="{{ url_for('static', filename='images/view.jpg') }}">
+        {{ user.name }}'s Watchlist
+    </h2>
+    <h3>Login</h3>
+    <form method="post">
+        Username<br>
+        <input type="text" name="username" required><br><br>
+        Password<br>
+        <!-- 密码输入框的 type 属性使用 password，会将输入值显示为圆点 -->
+        <input type="password" name="password" required><br><br>
+        <input class="btn" type="submit" name="submit" value="Submit">
+    </form>
+    <footer>
+        <small>&copy; 2025 <a href="https://github.com/ZiiiHe1012/watchlist">Watchlist</a></small>
+    </footer>
+</body>
+</html>
