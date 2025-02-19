@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ user.name }}'s Watchlist</title>
+    <link rel="icon" href="{{ url_for('static', filename='R-C.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body>
+    <h2>
+        <img alt="View" class="view" src="{{ url_for('static', filename='images/view.jpg') }}">
+        {{ user.name }}'s Watchlist
+    </h2>
+    <h3>Edit item</h3>
+    <form method="post">
+        Name <input type="text" name="title" autocomplete="off" required value="{{ movie.title }}">
+        Year <input type="text" name="year" autocomplete="off" required value="{{ movie.year }}">
+        <input class="btn" type="submit" name="submit" value="Update">
+    </form>
+    <footer>
+        <small>&copy; 2025 <a href="https://github.com/ZiiiHe1012/watchlist">Watchlist</a></small>
+    </footer>
+</body>
+</html>
